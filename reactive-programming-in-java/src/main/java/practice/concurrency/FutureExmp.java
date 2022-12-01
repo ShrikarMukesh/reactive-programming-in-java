@@ -20,13 +20,10 @@ public class FutureExmp {
             try {
                 Integer result = futue.get(); //blocking
                 System.out.println("Result of future #" + i+ "=" +result);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            } catch (ExecutionException e) {
+            } catch (InterruptedException | ExecutionException e) {
                 throw new RuntimeException(e);
             }
         }
-
         System.out.println("Thead Name: " + Thread.currentThread().getName());
     }
     static class Task implements Callable<Integer>{
