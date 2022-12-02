@@ -1,5 +1,7 @@
-package com.rapidapi.exchange;
+package com.rapidapi.entity;
 
+import com.rapidapi.api.request.MarketNewRequest;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +11,14 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "quotes")
 public class Quote {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long quoteId;
+
     private String securityType;
     private String symbol;;
     private String exchange;
@@ -30,4 +39,7 @@ public class Quote {
     private String title;
     private String card;
 
+    @JoinColumn(name = "marketnewsid")
+    @ManyToOne
+    private MarketNewRequest qmnr;
 }

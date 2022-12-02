@@ -1,6 +1,6 @@
 package com.rapidapi.controller;
 
-import com.rapidapi.exchange.MarketNewsResponse;
+import com.rapidapi.api.response.MarketNewsResponse;
 import com.rapidapi.service.MarketNewsService;
 import com.rapidapi.utilities.Constants;
 import org.springframework.http.HttpStatus;

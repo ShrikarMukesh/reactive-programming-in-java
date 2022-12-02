@@ -1,5 +1,7 @@
-package com.rapidapi.exchange;
+package com.rapidapi.api.response;
 
+import com.rapidapi.entity.News;
+import com.rapidapi.entity.Quote;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
