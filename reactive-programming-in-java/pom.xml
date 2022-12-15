@@ -11,15 +11,27 @@
 	<groupId>com.reactive</groupId>
 	<artifactId>reactive-programming-in-java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>spring-boot-reactive-programming-in-java</name>
 	<description>reactive-programming-in-java Problems</description>
+	<modules>
+		<module>reactor</module>
+		<module>basic-introduction</module>
+	</modules>
+
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>1.0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>io.projectreactor</groupId>

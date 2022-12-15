@@ -1,10 +1,9 @@
-package com.reactive.sec01.courseutil;
+package courseutil;
 
-import java.util.Objects;
 import java.util.function.Consumer;
 
 public class Util {
-    public static Consumer<Objects> onNext(){
+    public static Consumer<? super Integer> onNext(){
         return object -> System.out.println("Received : "+ object);
     }
 
