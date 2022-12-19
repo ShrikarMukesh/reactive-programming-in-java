@@ -11,7 +11,6 @@ import java.util.function.Function;
 
 public class FluxAndMonoServices {
 
-
     public Flux<String> fruitsFlux() {
         return Flux.fromIterable(List.of("Mango","Orange","Banana")).log();
     }
